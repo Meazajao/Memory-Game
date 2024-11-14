@@ -1,6 +1,6 @@
 const section = document.querySelector("section");
 const playerLivesCount = document.querySelector("span");
-let playerLives = 6;
+let playerLives = 8;
 playerLivesCount.textContent = playerLives;
 
 const getData = () => [
@@ -78,11 +78,11 @@ const checkCard = (e) => {
             playerLives--;
             playerLivesCount.textContent = playerLives;
 
-            if (playerLives === 0) restart("Try again");
+            if (playerLives === 0) restart("You lost, try again!");
         }
     }
 
-    if (rotateCard.length === 16) restart("You won!");
+    if (rotateCard.length === 16) restart("You won! congratulation!");
 };
 
 const restart = (text) => {
